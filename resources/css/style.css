@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+:root {
+    --color-background: rgb(17, 24, 49);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
+}
+
+p {
+    color: #fff;
+}
+
+h1 {
+    color: #fff;
+}
+
+li p {
+    color: #000;
+}
+
+header .logo {
+    color: white;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+body {
+    background: var(--color-background);
+    overflow-x: hidden;
+}
+
+
+
+#text {
+    position: relative;
+    top: -400px;
+    color: rgb(0, 0, 0);
+    background: white;
+    padding: 6px 15px;
+    border-radius: 40px;
+    white-space: nowrap;
+    z-index: 5;
+}
+
+ol {
+    counter-reset: li;
+    /* Initiate a counter */
+    list-style: none;
+    /* Remove default numbering */
+    *list-style: decimal;
+    /* Keep using default numbering for IE6/7 */
+    padding: 0;
+    margin-bottom: 4em;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+}
+
+ol ul {
+    counter-reset: li;
+    /* Initiate a counter */
+    list-style: none;
+    /* Remove default numbering */
+    *list-style: decimal;
+    /* Keep using default numbering for IE6/7 */
+    margin: 0 0 0 5em;
+
+    font-size: 10px;
+    /* Add some left margin for inner lists */
+}
+
+.rounded-list-first li {
+    color: #000;
+}
+
+.rounded-list-first p {
+    position: relative;
+    display: block;
+    padding: 0.5em;
+    padding-left: 2em;
+    margin: .5em 0;
+    background: #f0f0f0;
+    text-decoration: none;
+    border-radius: .3em;
+    transition: all .3s ease-out;
+    font-size: 1em;
+}
+
+.rounded-list-first p:hover {
+    background: #eee;
+}
+
+.rounded-list-first p:before {
+    content: counter(li);
+    counter-increment: li;
+    position: absolute;
+    left: -1.3em;
+    top: 50%;
+    margin-top: -1.3em;
+    background: rgb(210, 63, 205);
+    height: 2em;
+    width: 2em;
+    line-height: 2em;
+    border: .3em solid #fff;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 2em;
+    transition: all .3s ease-out;
+}
+
+.rounded-list-second p:before  {
+    background: rgb(34, 211, 255);
+}
+
+
+/* MEDIA QUERIES - MOBILE FIRST */
+@media only screen and (max-width: 991px) {
+
+
+    /* rules here apply to devices from from 768px to 991px (inclusive) */
+
+    * {
+        font-size: 10px;
+    }
+
+    header {
+        padding: 2em;
+    }
+
+    header ul {
+        z-index: 100;
+    }
+
+    header ul li {
+        list-style: none;
+        margin-bottom: 10px;
+        display: inline-block;
+    }
+
+    header ul li a {
+        text-decoration: none;
+        padding: 6px 15px;
+        color: white;
+        border-radius: 20px;
+    }
+
+    header ul li {
+        list-style: none;
+        margin-left: 20px;
+    }
+
+    header ul li a {
+        text-decoration: none;
+        padding: 6px 15px;
+        color: white;
+        border-radius: 20px;
+    }
+
+    header ul li a:hover,
+    header ul li a.active {
+        background: white;
+        color: black;
+    }
+
+    h2 {
+        font-size: 10px;
+    }
+
+    section {
+        width: 100%;
+        height: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section::before {
+        content: '';
+        position: relative;
+        bottom: 50px;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to top, var(--color-background), transparent);
+        z-index: 10;
+    } 
+
+    .sec {
+        padding: 3.3em;
+    }
+
+    .sec p {
+        font-size: 1em;
+    }    
+    .sec h1 {
+        font-size: 2em;
+        margin-bottom: 15px;
+        color: white;
+    }    
+
+    .events{
+        background-image: linear-gradient(to  bottom, var(--color-background) 0%, transparent 50%),url('../images/event2.png');
+        height: 75vh;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;  
+    }
+
+    header {
+        background-image: url('../images/header.png');
+        height: 100vh;        
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;       
+    }
+}
+
+@media (min-width: 992px) {
+    /* rules here apply to devices from 992px to 1199px (inclusive) */
+    .sec {
+        position: relative;
+        padding: 100px;
+        background: var(--color-background);
+    }
+
+    .sec p {
+        font-size: 1.5em;
+    }
+
+    .sec h1 {
+        font-size: 3em;
+        margin-bottom: 15px;
+        color: white;
+    }
+
+    .events{
+        background-image: url('../images/event2.png');
+        height: 125vh;
+        background-size: 100% 100%;
+    }
+
+    header {
+        padding: 30px 100px;
+    }
+
+    header ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header ul li {
+        list-style: none;
+        margin-left: 20px;
+    }
+
+    header ul li a {
+        text-decoration: none;
+        padding: 6px 15px;
+        color: white;
+        border-radius: 20px;
+    }
+
+    header ul li a:hover,
+    header ul li a.active {
+        background: white;
+        color: black;
+    }
+
+    section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section::before {
+        content: '';
+        position: relative;
+        bottom: 100px;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to top, var(--color-background), transparent);
+        z-index: 10;
+    } 
+
+    header {
+        background-image: url('../images/header.png');
+        height: 100vh;        
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;       
+    }
+}
+
+@media (min-width: 1200px) {
+
+    /* rules here apply to devices 1200px and greater */
+    .sec {
+        position: relative;
+        padding: 100px;
+        background: var(--color-background);
+    }
+
+    .sec p {
+        font-size: 2em;
+    }
+
+    .sec h1 {
+        font-size: 4em;
+        margin-bottom: 15px;
+        color: white;
+    }
+
+    .events{
+        background-image: url('../images/event2.png');
+        height: 125vh;
+        background-size: 100% 100%;
+    }
+
+    header {
+        padding: 30px 100px;
+    }
+
+    header ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    header ul li {
+        list-style: none;
+        margin-left: 20px;
+    }
+
+    header ul li a {
+        text-decoration: none;
+        padding: 6px 15px;
+        color: white;
+        border-radius: 20px;
+    }
+
+    header ul li a:hover,
+    header ul li a.active {
+        background: white;
+        color: black;
+    }
+
+    section {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    section::before {
+        content: '';
+        position: relative;
+        bottom: 100px;
+        width: 100%;
+        height: 100px;
+        background: linear-gradient(to top, var(--color-background), transparent);
+        z-index: 10;
+    } 
+
+    header {
+        background-image: url('../images/header.png');
+        height: 175vh;
+        background-size: 100% 100%;
+    }
+
+}
