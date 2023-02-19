@@ -20,6 +20,11 @@ h1 {
     color: #fff;
 }
 
+header h2 {
+    font-size: 12px;
+    margin: 4em;
+}
+
 li p {
     color: #000;
 }
@@ -130,7 +135,7 @@ ol ul {
     }
 
     header {
-        padding: 2em;
+        padding: 0em;
     }
 
     header ul {
@@ -168,9 +173,7 @@ ol ul {
         color: black;
     }
 
-    h2 {
-        font-size: 10px;
-    }
+
 
     section {
         width: 100%;
@@ -251,7 +254,7 @@ ol ul {
     }
 
     header {
-        padding: 30px 100px;
+        padding: 0;
     }
 
     header ul {
@@ -336,7 +339,7 @@ ol ul {
     }
 
     header {
-        padding: 30px 100px;
+        padding: 0;
     }
 
     header ul {
