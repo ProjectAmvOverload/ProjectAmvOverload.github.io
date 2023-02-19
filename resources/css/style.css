@@ -218,6 +218,12 @@ ol ul {
         background-repeat: no-repeat;
         background-position: center center;       
     }
+
+    .demoVideo{
+        margin-top: 100px;
+        width: 100%;
+        height: 100%;
+    }
 }
 
 @media (min-width: 992px) {
@@ -296,6 +302,12 @@ ol ul {
         background-repeat: no-repeat;
         background-position: center center;       
     }
+
+    .demoVideo{
+        margin-top: 100px;
+        width: 100%;
+        height: 100%;
+    }    
 }
 
 @media (min-width: 1200px) {
@@ -372,6 +384,11 @@ ol ul {
         background-image: url('../images/header.png');
         height: 175vh;
         background-size: 100% 100%;
+    }
+
+    .demoVideo{
+        width: auto;
+        height: auto;
     }
 
 }
